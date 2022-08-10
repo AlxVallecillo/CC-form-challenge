@@ -1,0 +1,64 @@
+/*  */
+/*  */
+
+/* ------------- */
+/*   𝑅𝑒𝑠𝑒𝑡       */
+/* ------------- */
+
+/*  𝑏𝑜𝑥 𝑠𝑖𝑧𝑖𝑛𝑔 𝑟𝑒𝑠𝑒𝑡  */
+* {
+    box-sizing: border-box;
+}
+
+/* 𝑅𝑒𝑠𝑒𝑡 𝑀𝑎𝑟𝑔𝑖𝑛𝑠 */
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+/* 𝑚𝑎𝑘𝑒 𝑖𝑡 𝑎 𝑏𝑖𝑡 𝑚𝑜𝑟𝑒 𝑒𝑎𝑠𝑦 𝑡𝑜 𝑤𝑜𝑟𝑘 𝑤𝑖𝑡ℎ 𝑓𝑜𝑟𝑚𝑠  */
+input, button, textarea {
+    font: inherit;
+}
+
+/*  𝑅𝑒𝑚𝑜𝑣𝑒 𝑎𝑛𝑖𝑚𝑎𝑡𝑖𝑜𝑛𝑠 𝑓𝑜𝑟 𝑢𝑠𝑒𝑟 𝑡ℎ𝑎𝑡 ℎ𝑎𝑣𝑒 𝑡ℎ𝑒𝑚 𝑡𝑢𝑟𝑛𝑒𝑑 𝑜𝑓𝑓  */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+
+/* ------------- */
+/*   𝑈𝑡𝑖𝑙𝑖𝑡𝑦 𝐶𝑙𝑎𝑠𝑒𝑠 */
+/* ------------- */
+
+.container {
+    margin-inline: auto;
+    padding-inline: 1.5em;
+    max-width: 85rem;
+}
+
+:root {
+
+    /* 𝐶𝑜𝑙𝑜𝑟𝑠  */
+    --gradient: linear-gradient(0.30turn, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+
+    /* 𝑁𝑒𝑢𝑡𝑟𝑎𝑙 𝐶𝑜𝑙𝑜𝑟𝑠  */
+    --lgray-violet: hsl(270, 3%, 87%);
+    --dark-gray-violet: hsl(279, 6%, 55%);
+    --dark-violet: hsl(278, 68%, 11%);
+
+    /* 𝐹𝑜𝑛𝑡 𝐹𝑎𝑚𝑖𝑙𝑦 */
+    --font-fam: font-family: 'Space Grotesk', sans-serif;
+}
+
+
+body {
+    background: var(--gradient);
+}
