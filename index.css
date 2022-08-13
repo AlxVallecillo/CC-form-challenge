@@ -1,6 +1,8 @@
 /*  */
 /*  */
 
+
+
 /* ------------- */
 /*   𝑅𝑒𝑠𝑒𝑡       */
 /* ------------- */
@@ -16,7 +18,7 @@ body, h1, h2, h3, h4, h5, p {
 }
 
 /* 𝑚𝑎𝑘𝑒 𝑖𝑡 𝑎 𝑏𝑖𝑡 𝑚𝑜𝑟𝑒 𝑒𝑎𝑠𝑦 𝑡𝑜 𝑤𝑜𝑟𝑘 𝑤𝑖𝑡ℎ 𝑓𝑜𝑟𝑚𝑠  */
-input, button, textarea {
+input, button, textarea, label {
     font: inherit;
 }
 
@@ -33,20 +35,17 @@ input, button, textarea {
 }
 
 
-
 /* ------------- */
 /*   𝑈𝑡𝑖𝑙𝑖𝑡𝑦 𝐶𝑙𝑎𝑠𝑒𝑠 */
 /* ------------- */
 
 .container {
     margin-inline: auto;
-    padding-inline: 1.5em;
     max-width: 95rem;
 }
 
 .card {
-    width: 15rem;
-    height: 10rem;
+    width: 90%;
     /* background-image: url('images/bg-card-front.png'); */
 }
 
@@ -66,11 +65,69 @@ input, button, textarea {
     --dark-violet: hsl(278, 68%, 11%);
 
     /* 𝐹𝑜𝑛𝑡 𝐹𝑎𝑚𝑖𝑙𝑦 */
-    --font-fam: font-family: 'Space Grotesk', sans-serif;
+    --font-fam: 'Space Grotesk', sans-serif;
 }
 
-/* aside {
-    display: inline;
-} */
 
-/*  */
+/* -------------- */
+/*   More Styling */
+/* -------------- */
+
+main {
+    font-family: var(--font-fam);
+    width: 100%;
+    position: relative;
+}
+
+footer {
+    position: relative;
+}
+
+footer>div {
+    position: absolute;
+    margin-top: 8px;
+    margin-bottom: 0;
+    bottom: 0;
+}
+
+aside {
+    display: inline;
+    height: 100vh;
+}
+
+aside.gradient-section {
+    background: url('images/bg-main-desktop.png') no-repeat;
+    background-size: cover;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+aside.form-section {
+    float: right;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.form-container {
+    width: 40%;
+    height: 12rem;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    margin-inline: auto;
+}
+
+/* .card-front {
+    background: url('images/bg-card-front.png') no-repeat;
+    background-size: cover;
+    display: inline;
+    position: inherit;
+    top: 16%;
+    left: 30%;
+    z-index: 2;
+} */
