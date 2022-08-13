@@ -44,11 +44,6 @@ input, button, textarea, label {
     max-width: 95rem;
 }
 
-.card {
-    width: 90%;
-    /* background-image: url('images/bg-card-front.png'); */
-}
-
 
 /* -------------- */
 /* Root Variables */
@@ -77,22 +72,12 @@ main {
     font-family: var(--font-fam);
     width: 100%;
     position: relative;
-}
-
-footer {
-    position: relative;
-}
-
-footer>div {
-    position: absolute;
-    margin-top: 8px;
-    margin-bottom: 0;
-    bottom: 0;
+    height: 100vh;
 }
 
 aside {
     display: inline;
-    height: 100vh;
+    height: 100%;
 }
 
 aside.gradient-section {
@@ -102,6 +87,22 @@ aside.gradient-section {
     position: absolute;
     top: 0;
     left: 0;
+
+}
+
+/* used background-size: contain  to make the bg-img fit the div width-content */
+div.card-front {
+    background: url('images/bg-card-front.png') no-repeat;
+    background-size: contain;
+}
+
+div.card-front+div {
+    width: inherit;
+}
+
+div.card-back {
+    background: url('images/bg-card-back.png') no-repeat;
+    background-size: contain;
 }
 
 aside.form-section {
@@ -119,15 +120,4 @@ aside.form-section {
     position: absolute;
     top: 30%;
     right: 10%;
-    margin-inline: auto;
 }
-
-/* .card-front {
-    background: url('images/bg-card-front.png') no-repeat;
-    background-size: cover;
-    display: inline;
-    position: inherit;
-    top: 16%;
-    left: 30%;
-    z-index: 2;
-} */
