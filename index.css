@@ -18,7 +18,7 @@ body, h1, h2, h3, h4, h5, p {
 }
 
 /* 𝑚𝑎𝑘𝑒 𝑖𝑡 𝑎 𝑏𝑖𝑡 𝑚𝑜𝑟𝑒 𝑒𝑎𝑠𝑦 𝑡𝑜 𝑤𝑜𝑟𝑘 𝑤𝑖𝑡ℎ 𝑓𝑜𝑟𝑚𝑠  */
-input, button, textarea, label {
+input, button, label {
     font: inherit;
 }
 
@@ -59,8 +59,7 @@ input, button, textarea, label {
 :root {
 
     /* 𝐶𝑜𝑙𝑜𝑟𝑠  */
-    --gradient: linear-gradient(0.30turn, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-
+    --gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     /* 𝑁𝑒𝑢𝑡𝑟𝑎𝑙 𝐶𝑜𝑙𝑜𝑟𝑠  */
     --lgray-violet: hsl(270, 3%, 87%);
     --dark-gray-violet: hsl(279, 6%, 55%);
@@ -77,7 +76,7 @@ input, button, textarea, label {
 
     /* Card/ Box Shadow */
     --box-shw: .3em .3em 1.6em .3em hsla(213, 13%, 15%, 0.2), -.3em .3em 1.6em .3em hsla(213, 13%, 15%, .2), .01em -.3em .3em hsla(213 13% 15% / .2%);
-    --bord-rad: 10px;
+    --bord-rad: 12px;
 }
 
 
@@ -193,24 +192,15 @@ div.cvc {
     letter-spacing: 2px;
 }
 
+/* img {
+    visibility: hidden;
+} */
 
+/* ------------ */
+/* Form styling */
+/* ------------ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Form section styling  */
-
-/* aside.form-section {
+aside.form-section {
     float: right;
     width: 65%;
     position: absolute;
@@ -221,8 +211,58 @@ div.cvc {
 
 .form-container {
     width: 40%;
-    height: 12rem;
+    height: auto;
     position: absolute;
     top: 30%;
-    right: 10%;
-} */
+    right: 20%;
+    font-weight: var(--fon-w-5);
+    color: var(--dark-violet);
+}
+
+/* labels by default are display inline and do not support margins and paddings 
+the is the option to set them as display: block but this time i willl use
+line-height instead */
+label {
+    line-height: 2.5;
+    color: inherit;
+    font-size: small;
+}
+
+input, button {
+    line-height: 2;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid hsla(213, 13%, 15%, 0.2);
+}
+
+input:focus {
+    border-image-source: var(--gradient);
+    border-image-slice: 30;
+    border-image-width: 2px;
+    background: hsl(0, 0%, 100%);
+}
+
+input {
+    margin: 0 0 4%;
+    color: inherit;
+    padding: 6px;
+}
+
+td {
+    width: 50%;
+}
+
+button {
+    margin-top: 1.4rem;
+    padding: 8px;
+    background-color: var(--dark-violet);
+    color: hsl(0, 0%, 100%);
+}
+
+[maxlength="2"] {
+    width: 42%;
+}
+
+[maxlength="3"] {
+    width: 100%;
+}
