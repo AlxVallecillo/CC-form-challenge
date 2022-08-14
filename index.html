@@ -49,10 +49,12 @@
 
       <!-- Back of the card -->
 
-      <!-- <div class="card-back">
-        <img src="images/bg-card-back.png" alt="">
-        <p>000</p>
-      </div> -->
+      <div class="card-back-container pos-abs">
+        <img id="back-img" src="images/bg-card-back.png" alt="">
+        <div class="cvc pos-abs">
+          <p>000</p>
+        </div>
+      </div>
 
     </aside>
 
@@ -61,17 +63,18 @@
       <div class="form-container">
         <form action="" method="post" aria-labelledby="cardDetails">
           <label for="name"> Cardholder Name </label> <br>
-          <input type="text" id="name" placeholder=" e.g. Jane Appleseed" required> <br>
+          <input type="text" id="name" placeholder=" e.g. Jane Appleseed" required autofocus> <br>
 
           <label for="card-number"> Card Number </label> <br>
-          <input type="number" id="card-number" placeholder=" e.g. 1234 5678 9123 0000 " required> <br>
+          <input type="tel" id="card-number" placeholder=" e.g. 1234 5678 9123 0000 " required maxlength="16"
+            minlength="16"> <br>
 
           <label for="expDate">Exp. Date (MM/YY)</label> <br>
-          <input type="number" id="expDate" placeholder="MM" required>
-          <input type="number" id="" placeholder="YY" required><br>
+          <input type="tel" id="expDate" placeholder="MM" required maxlength="2" minlength="2">
+          <input type="tel" id="" placeholder="YY" required maxlength="2" minlength="2"><br>
 
           <label for="Sec-code">CVC</label><br>
-          <input type="number" id="Sec-code" placeholder=" e.g. 123" required>
+          <input type="tel" id="Sec-code" placeholder=" e.g. 123" required maxlength="3" minlength="3">
           <br>
           <button> Confirm </button>
         </form>
