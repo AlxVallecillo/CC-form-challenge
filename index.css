@@ -2,7 +2,6 @@
 /*  */
 
 
-
 /* ------------- */
 /*   𝑅𝑒𝑠𝑒𝑡       */
 /* ------------- */
@@ -40,7 +39,7 @@ input, button, label {
 /* ------------- */
 
 .container {
-    margin-inline: auto;
+    margin-inline: 0;
     max-width: 95rem;
 }
 
@@ -113,37 +112,29 @@ aside.gradient-section {
 
 img.front {
     position: absolute;
-    top: 18%;
+    top: 12%;
     right: -22%;
-    max-height: 15.30rem;
+    width: 84%;
+    height: auto;
     z-index: var(--z-plus-1);
     box-shadow: var(--box-shw);
     border-radius: var(--bord-rad);
 }
 
 img.card-logo {
-    margin-bottom: 14%;
+    margin-bottom: 10%;
+    margin-top: 2%;
 }
 
 div.card-data {
     font-weight: var(--fon-w-4);
     position: absolute;
-    top: 18%;
-    right: -15%;
+    top: 12%;
+    right: -23%;
     color: hsl(0, 0%, 100%);
-    width: 25rem;
+    width: 84%;
     padding: 4%;
     z-index: var(--z-plus-1);
-}
-
-@media only screen and (max-width: 1162px) {
-    div.card-data {
-        left: 20%;
-    }
-
-    img.front {
-        left: 16%;
-    }
 }
 
 div>h1 {
@@ -153,7 +144,7 @@ div>h1 {
 }
 
 h1+div {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 div.card-name, div.exp-date, p {
@@ -163,6 +154,7 @@ div.card-name, div.exp-date, p {
 }
 
 div.exp-date {
+    padding-right: 8%;
     text-align: right;
     position: absolute;
     right: 0;
@@ -175,7 +167,7 @@ div.exp-date {
 
 
 div.card-back-container {
-    top: 60%;
+    top: 50%;
     left: 55%;
     z-index: var(--z-plus-1);
 }
@@ -191,10 +183,6 @@ div.cvc {
     color: hsl(0, 0%, 100%);
     letter-spacing: 2px;
 }
-
-/* img {
-    visibility: hidden;
-} */
 
 /* ------------ */
 /* Form styling */
@@ -213,7 +201,7 @@ aside.form-section {
     width: 40%;
     height: auto;
     position: absolute;
-    top: 30%;
+    top: 26%;
     right: 20%;
     font-weight: var(--fon-w-5);
     color: var(--dark-violet);
@@ -222,6 +210,7 @@ aside.form-section {
 /* labels by default are display inline and do not support margins and paddings 
 the is the option to set them as display: block but this time i willl use
 line-height instead */
+
 label {
     line-height: 2.5;
     color: inherit;
@@ -235,18 +224,27 @@ input, button {
     border: 1px solid hsla(213, 13%, 15%, 0.2);
 }
 
-input:focus {
-    border-image-source: var(--gradient);
-    border-image-slice: 30;
-    border-image-width: 2px;
-    background: hsl(0, 0%, 100%);
-}
 
 input {
     margin: 0 0 4%;
     color: inherit;
     padding: 6px;
 }
+
+/* emove arrows/spinners from input type number with CSS. */
+
+/* compatibilty with Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* compatibilty with Firefox*/
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 td {
     width: 50%;
@@ -266,3 +264,67 @@ button {
 [maxlength="3"] {
     width: 100%;
 }
+
+/* ------------------ */
+/* Media Query  CSS   */
+/* ------------------ */
+
+
+@media only screen and (max-width: 900px) {
+
+    img.card-logo {
+        margin-bottom: 12%;
+    }
+
+    img.front {
+        top: 14%;
+        left: 16%;
+        max-width: calc(100% + 1rem);
+        height: auto;
+    }
+
+    div.card-data {
+        left: 20%;
+        top: 14%;
+        width: 100%;
+    }
+
+    div>h1 {
+        letter-spacing: .2em;
+        font-size: 100%;
+        font-weight: inherit;
+        padding: 1%;
+    }
+
+    h1+div {
+        margin-top: 5%;
+    }
+
+    img#back-img {
+        max-width: calc(100% + 10rem);
+        height: auto;
+    }
+
+
+    div.card-back-container {
+        top: 47%;
+    }
+
+    /* ------------------- */
+    /*  Media Query form CSS */
+    /* ------------------- */
+
+    .form-container {
+        top: 15%;
+        width: 45%;
+        right: 15%;
+    }
+}
+
+/* input:focus {
+    border: solid 4px transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+} */

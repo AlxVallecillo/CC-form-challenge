@@ -38,10 +38,11 @@
 
           <div class="name-exp pos-rel">
             <div class="card-name">
-              <p autocapitalize="characters">Jane Appleseed</p>
+              <p>Jane Appleseed</p>
             </div>
             <div class="exp-date">
-              <p>00/00</p>
+              <p class="exp-m">00</p><span>/</span>
+              <p class="exp-y">00</p>
             </div>
           </div>
         </div>
@@ -61,26 +62,29 @@
     <!-- Left panel with Form  -->
     <aside aria-labelledby="formSection" class="form-section">
       <div class="form-container">
-        <form action="" method="post" aria-labelledby="cardDetails">
+        <form action="index.html" method="post" aria-labelledby="cardDetails">
+
+
           <label for="name">CARDHOLDER NAME </label> <br>
           <input type="text" id="name" placeholder=" e.g. Jane Appleseed" required autofocus autocomplete="off"> <br>
 
           <label for="card-number"> CARD NUMBER</label> <br>
-          <input type="tel" id="card-number" placeholder=" e.g. 1234 5678 9123 0000 " required maxlength="16"
-            minlength="16" autocomplete="off"> <br>
+          <input type="number" id="card-number" placeholder=" e.g. 1234 5678 9123 0000 " required maxlength="19"
+            minlength="19" autocomplete="off"> <br>
 
           <table>
             <tr>
               <td>
                 <label for="expM">EXP. DATE (MM/YY)</label> <br>
-                <input type="tel" id="expM" placeholder="  MM" required maxlength="2" minlength="2" autocomplete="off">
-                <input type="tel" id="expY" placeholder="  YY" required maxlength="2" minlength="2" autocomplete="off">
+                <input type="number" id="expM" placeholder="  MM" required maxlength="2" minlength="2"
+                  autocomplete="off">
+                <input type="number" id="expY" placeholder="  YY" required maxlength="2" minlength="2"
+                  autocomplete="off">
               </td>
               <td>
                 <label class="cvc-code" for="cvc">CVC</label><br>
-                <input type="tel" id="cvc" placeholder=" e.g. 123" required maxlength="3" minlength="3"
+                <input type="number" id="cvc" placeholder=" e.g. 123" required maxlength="3" minlength="3"
                   title="Invalid Code formating" pattern="[0-9]{3}" autocomplete="off">
-
               </td>
             </tr>
           </table>
@@ -96,12 +100,13 @@
     We've added your card details
     Continue -->
   </main>
-  <footer>
+  <!-- <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Alexander Vallecillo</a>.
     </div>
-  </footer>
+  </footer> -->
+  <script src="app.js"></script>
 
 </body>
 
