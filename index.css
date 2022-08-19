@@ -40,7 +40,8 @@ input, button, label {
 
 .container {
     margin-inline: 0;
-    max-width: 95rem;
+    max-width: 90rem;
+    height: auto;
 }
 
 .pos-rel {
@@ -76,6 +77,10 @@ input, button, label {
     /* Card/ Box Shadow */
     --box-shw: .3em .3em 1.6em .3em hsla(213, 13%, 15%, 0.2), -.3em .3em 1.6em .3em hsla(213, 13%, 15%, .2), .01em -.3em .3em hsla(213 13% 15% / .2%);
     --bord-rad: 12px;
+
+    /* Variables used for Mobile Layout  */
+    --pos-rel: relative;
+    --pos-abs: absolute;
 }
 
 
@@ -114,7 +119,8 @@ img.front {
     position: absolute;
     top: 12%;
     right: -22%;
-    width: 84%;
+    width: 24rem;
+    max-width: 27.4rem;
     height: auto;
     z-index: var(--z-plus-1);
     box-shadow: var(--box-shw);
@@ -122,6 +128,7 @@ img.front {
 }
 
 img.card-logo {
+    width: 4rem;
     margin-bottom: 10%;
     margin-top: 2%;
 }
@@ -131,33 +138,37 @@ div.card-data {
     position: absolute;
     top: 12%;
     right: -23%;
+    height: 11.3rem;
     color: hsl(0, 0%, 100%);
-    width: 84%;
-    padding: 4%;
+    width: 23.5rem;
+    max-width: 27.4rem;
+    padding: 2% 0 0 3%;
     z-index: var(--z-plus-1);
 }
 
 div>h1 {
-    letter-spacing: .3rem;
+    letter-spacing: .2rem;
     font-size: 1.5rem;
     font-weight: inherit;
 }
 
-h1+div {
-    margin-top: 7%;
-}
-
-div.card-name, div.exp-date, p {
-    width: 45%;
-    display: inline;
-
-}
-
-div.exp-date {
-    padding-right: 8%;
-    text-align: right;
+h1+table {
     position: absolute;
-    right: 0;
+    bottom: 1px;
+    width: 82%;
+    font-size: small;
+}
+
+td.card-name, td.exp-date {
+    width: 48%;
+}
+
+p {
+    display: inline;
+}
+
+td.exp-date, span {
+    text-align: right;
 }
 
 
@@ -166,13 +177,15 @@ div.exp-date {
 /* -------------------- */
 
 
-div.card-back-container {
-    top: 50%;
-    left: 55%;
+div.card-front+div.card-back-container {
+    top: 45%;
+    right: -40%;
     z-index: var(--z-plus-1);
 }
 
 img#back-img {
+    width: 24rem;
+    max-width: 27.4rem;
     box-shadow: var(--box-shw);
     border-radius: var(--bord-rad);
 }
@@ -201,7 +214,7 @@ aside.form-section {
     width: 40%;
     height: auto;
     position: absolute;
-    top: 26%;
+    top: 20%;
     right: 20%;
     font-weight: var(--fon-w-5);
     color: var(--dark-violet);
@@ -245,7 +258,6 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-
 td {
     width: 50%;
 }
@@ -257,12 +269,8 @@ button {
     color: hsl(0, 0%, 100%);
 }
 
-[maxlength="2"] {
+#expM, #expY {
     width: 42%;
-}
-
-[maxlength="3"] {
-    width: 100%;
 }
 
 /* ------------------ */
@@ -270,44 +278,50 @@ button {
 /* ------------------ */
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1060px) and (min-width:719px) {
 
     img.card-logo {
-        margin-bottom: 12%;
+        margin-bottom: 6%;
+        max-width: 20%;
     }
 
     img.front {
         top: 14%;
         left: 16%;
-        max-width: calc(100% + 1rem);
+        max-width: 20rem;
         height: auto;
     }
 
     div.card-data {
         left: 20%;
         top: 14%;
-        width: 100%;
+        max-width: 20rem;
+        height: 9.3rem;
     }
 
     div>h1 {
         letter-spacing: .2em;
-        font-size: 100%;
+        font-size: 1.1rem;
         font-weight: inherit;
         padding: 1%;
     }
 
-    h1+div {
-        margin-top: 5%;
+    h1+table {
+        margin-top: 2%;
     }
 
+    /*  Card Back */
+
     img#back-img {
-        max-width: calc(100% + 10rem);
+        width: 20rem;
         height: auto;
     }
 
 
     div.card-back-container {
         top: 47%;
+        left: 35%;
+        max-width: 20rem;
     }
 
     /* ------------------- */
@@ -317,9 +331,77 @@ button {
     .form-container {
         top: 15%;
         width: 45%;
-        right: 15%;
+        right: 20%;
     }
 }
+
+@media only screen and (max-width: 720px) {
+    main {
+        min-width: 375px;
+    }
+
+    aside.gradient-section {
+        max-height: 34vh;
+        width: 100%;
+
+    }
+
+    aside.form-section {
+        max-height: 65vh;
+        width: 100%;
+        position: static;
+    }
+
+    img.card-logo {
+        margin-bottom: 6%;
+        max-width: 18%;
+    }
+
+    img.front {
+        position: absolute;
+        top: 52%;
+        left: 26%;
+        max-width: 20rem;
+        height: auto;
+    }
+
+    div.card-data {
+        left: 26%;
+        top: 52%;
+        max-width: 20rem;
+        height: 9.3rem;
+    }
+
+    div>h1 {
+        letter-spacing: .2em;
+        font-size: 1.1rem;
+        font-weight: inherit;
+        padding: 1%;
+    }
+
+    h1+table {
+        margin-top: 2%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* input:focus {
     border: solid 4px transparent;

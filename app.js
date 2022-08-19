@@ -1,20 +1,17 @@
 
-// limit card input to accept 19 characters
 
 let cardNumber = document.querySelector('#card-number');
 let OnCard = document.querySelector('h1');
 
 cardNumber.addEventListener('input', function () {
-    if (OnCard.innerText === "") {
-        OnCard.innerText = '0000 0000 0000 0001';
-    }
     OnCard.innerText = this.value;
     console.log(OnCard);
 });
 
+// change card name dynamically on CARD image
 
 let input_Name = document.querySelector('#name');
-let OnCard_name = document.querySelector('div.card-name>p');
+let OnCard_name = document.querySelector('td.card-name>p');
 
 input_Name.addEventListener('input', function () {
     OnCard_name.innerText = this.value.toUpperCase();     // add the typed in value to the <p> on the card image
@@ -36,12 +33,11 @@ get_year_value.addEventListener('input', function () {
     add_year.innerText = this.value;     // add the typed in value to the <p> on the card image
 });
 
-// CVC code
+// CVC code 
 let getCVC = document.querySelector('#cvc');
 let addCVC = document.querySelector('div.cvc>p');
 
 getCVC.addEventListener('input', function () {
     addCVC.innerText = this.value;     // add the typed in value to the <p> on the card image
 });
-
 
