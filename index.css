@@ -352,10 +352,11 @@ button {
     }
 
     aside.form-section {
-        position: initial;
-        height: 60vh;
+        position: absolute;
+        z-index: -1;
+        top: 40%;
         width: 100%;
-        background-color: rgb(162, 217, 237);
+        /* background-color: rgb(162, 217, 237); */
     }
 
     img.card-logo {
@@ -406,7 +407,7 @@ button {
         position: absolute;
         width: 80%;
         margin-inline: auto;
-        top: 160%;
+        top: 40%;
         bottom: 1px;
         left: 0;
         right: 0;
