@@ -91,12 +91,13 @@ main {
     font-family: var(--font-fam);
     width: 100%;
     position: relative;
-    height: 100vh;
+    height: auto;
 }
 
 aside {
     display: inline;
-    height: 100vh;
+    height: 736px;
+    max-height: 736px;
 }
 
 aside.gradient-section {
@@ -349,16 +350,6 @@ button {
         width: 100%;
         position: initial;
     }
-
-    /* aside.gradient-section {
-        background: url('images/bg-main-desktop.png') no-repeat;
-        background-size: cover;
-        width: 35%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    
-    } */
 
     aside.form-section {
         position: initial;
