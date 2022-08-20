@@ -343,10 +343,11 @@ button {
     }
 
     aside.gradient-section {
+        background-image: url("images/bg-main-mobile.png");
         z-index: var(--z-plus-1);
         display: block;
-        max-height: 40vh;
-        height: 40vh;
+        max-height: 30vh;
+        height: 30vh;
         width: 100%;
         position: initial;
     }
@@ -365,41 +366,48 @@ button {
     }
 
     img.front {
+        border-radius: 3px;
         z-index: 2;
         position: absolute;
-        top: 60%;
-        left: 9%;
-        max-width: 80%;
+        top: 52%;
+        left: 5%;
+        max-width: 16rem;
         height: auto;
-    }
-
-    img#back-img {
-        max-width: 98%;
     }
 
     div.card-data {
         z-index: 2;
-        padding: 4%;
-        left: 10%;
-        top: 59%;
-        max-width: 100%;
-        height: 11.6rem;
+        padding: 1%;
+        left: 8%;
+        top: 52%;
+        max-width: 17rem;
+        height: 8rem;
+    }
+
+    img#back-img {
+        max-width: 15rem;
+        border-radius: 3px;
+    }
+
+    div.cvc {
+        bottom: 46%;
+        font-size: small;
     }
 
     div>h1 {
         letter-spacing: .2em;
-        font-size: 1.2rem;
+        font-size: .9rem;
         font-weight: inherit;
     }
 
-    h1+table {
-        margin-top: 2%;
-    }
+    /* h1+table {
+        margin-top: 0;
+    } */
 
     div.card-front+div.card-back-container {
         z-index: var(--z-plus-1);
         top: 12%;
-        right: 10%;
+        right: 6%;
     }
 
 
@@ -407,7 +415,7 @@ button {
         position: absolute;
         width: 80%;
         margin-inline: auto;
-        top: 40%;
+        top: 30%;
         bottom: 1px;
         left: 0;
         right: 0;
