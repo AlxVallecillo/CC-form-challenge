@@ -371,7 +371,7 @@ button {
         position: absolute;
         top: 52%;
         left: 5%;
-        max-width: 16rem;
+        max-width: 18rem;
         height: auto;
     }
 
@@ -380,12 +380,12 @@ button {
         padding: 1%;
         left: 8%;
         top: 52%;
-        max-width: 17rem;
-        height: 8rem;
+        max-width: 16rem;
+        height: 8.8rem;
     }
 
     img#back-img {
-        max-width: 15rem;
+        max-width: 18rem;
         border-radius: 3px;
     }
 
@@ -396,17 +396,18 @@ button {
 
     div>h1 {
         letter-spacing: .2em;
-        font-size: .9rem;
+        padding-top: 4%;
+        font-size: 1rem;
         font-weight: inherit;
     }
 
-    /* h1+table {
-        margin-top: 0;
-    } */
+    h1+table {
+        width: 96%;
+    }
 
     div.card-front+div.card-back-container {
         z-index: var(--z-plus-1);
-        top: 12%;
+        top: 9%;
         right: 6%;
     }
 
@@ -416,7 +417,6 @@ button {
         width: 80%;
         margin-inline: auto;
         top: 30%;
-        bottom: 1px;
         left: 0;
         right: 0;
     }
