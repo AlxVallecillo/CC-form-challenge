@@ -64,6 +64,7 @@ input, button, label {
     --lgray-violet: hsl(270, 3%, 87%);
     --dark-gray-violet: hsl(279, 6%, 55%);
     --dark-violet: hsl(278, 68%, 11%);
+    --error: hsl(0, 100%, 66%);
 
     /* 𝐹𝑜𝑛𝑡 𝐹𝑎𝑚𝑖𝑙𝑦 */
     --font-fam: 'Space Grotesk', sans-serif;
@@ -273,6 +274,56 @@ button {
     width: 42%;
 }
 
+/* ------------------------------------------------ */
+/* Show DIV under Inputs when an error is detected  */
+/* ------------------------------------------------ */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+    font-size: small;
+    color: var(--error);
+}
+
+/* ----------------------------------------------- */
+/* Final Status after adding card details to form  */
+/* ------------------------------------------------ */
+
+.thank-you {
+    top: 28%;
+    left: 40%;
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 50%;
+    color: inherit;
+}
+
+div.thank-you>img,
+div.thank-you>h1,
+div.thank-you>h3 {
+    padding-top: 2.3%;
+    padding-bottom: 2.2%;
+}
+
+div.thank-you>h1 {
+    font-weight: var(--fon-w-5);
+}
+
+div.thank-you>h3 {
+    font-weight: var(--fon-w-4);
+    color: var(--dark-gray-violet);
+    font-size: 1rem;
+}
+
+button.continue {
+    margin-top: 5%;
+    width: 70%;
+}
+
 /* ------------------ */
 /* Media Query  CSS   */
 /* ------------------ */
@@ -333,6 +384,20 @@ button {
         width: 45%;
         right: 20%;
     }
+
+    /* ----------------------------------------------- */
+    /* Final Status after adding card details to form  */
+    /* ------------------------------------------------ */
+
+    .thank-you {
+        top: 28%;
+        left: 40%;
+        position: absolute;
+        text-align: center;
+        display: block;
+        width: 50%;
+        color: inherit;
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -357,6 +422,7 @@ button {
         z-index: -1;
         top: 40%;
         width: 100%;
+        max-height: 90vh;
         /* background-color: rgb(162, 217, 237); */
     }
 
@@ -381,7 +447,7 @@ button {
         left: 8%;
         top: 52%;
         max-width: 16rem;
-        height: 8.8rem;
+        height: 8.2rem;
     }
 
     img#back-img {
@@ -419,6 +485,25 @@ button {
         top: 30%;
         left: 0;
         right: 0;
+    }
+
+    /* ----------------------------------------------- */
+    /* Final Status after adding card details to form  */
+    /* ------------------------------------------------ */
+
+    .thank-you {
+        position: static;
+        margin-top: 15rem;
+        margin-inline: auto;
+        position: initial;
+        display: block;
+        width: fit-content;
+        color: inherit;
+    }
+
+    button.continue {
+        margin-top: 5%;
+        width: 100%;
     }
 
 }
