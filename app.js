@@ -7,14 +7,17 @@ cardNumber.addEventListener('input', function () {
     OnCard.innerText = this.value;
 });
 
-// change card name dynamically on CARD image
 
+
+// change card name dynamically on CARD image
 let input_Name = document.querySelector('#name');
 let OnCard_name = document.querySelector('td.card-name>p');
 
 input_Name.addEventListener('input', function () {
     OnCard_name.innerText = this.value.toUpperCase();     // add the typed in value to the <p> on the card image
 });
+
+
 
 //  Exp month 
 let get_month_value = document.querySelector('input#expM');
@@ -23,7 +26,6 @@ let addMonth = document.querySelector('.exp-m');
 get_month_value.addEventListener('input', function () {
     addMonth.innerText = this.value;     // add the typed in value to the <p> on the card image
 });
-
 // Exp year 
 let get_year_value = document.querySelector('input#expY');
 let add_year = document.querySelector('.exp-y');
@@ -31,6 +33,8 @@ let add_year = document.querySelector('.exp-y');
 get_year_value.addEventListener('input', function () {
     add_year.innerText = this.value;     // add the typed in value to the <p> on the card image
 });
+
+
 
 // CVC code 
 let getCVC = document.querySelector('#cvc');
@@ -45,6 +49,8 @@ getCVC.addEventListener('input', function () {
 // hide the current form and display the final status Thank you on screen 
 
 let confirmBTN = document.querySelector('#confirm');
+let form = document.querySelector('form').classList;
+let final = document.querySelector('.final').classList;
 
 // validate that the input ntype name is not empty.
 confirmBTN.addEventListener('click', function () {
@@ -72,10 +78,12 @@ confirmBTN.addEventListener('click', function () {
         checkField(veryfyCVC, getCVC, emptyName);
     }
 
+    form.add('hide');
+    final.remove('hide');
+    console.log(final);
 });
 
-// validate the field is not empty. using a switch statement
-
+// animate if the field is  empty. using a switch statement
 function checkField(param1, param2, param3) {
     switch (param2.value) {
         case param3:
@@ -87,5 +95,4 @@ function checkField(param1, param2, param3) {
             break;
     }
 }
-
 

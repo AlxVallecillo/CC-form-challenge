@@ -63,7 +63,7 @@
 
     <!-- Left panel with Form  -->
     <aside aria-labelledby="formSection" class="form-section">
-      <div class="form-container  ">
+      <div class="form-container hide ">
         <form action="" method="" name="cardForm" aria-labelledby="cardDetails">
 
           <label for="name">CARDHOLDER NAME </label> <br>
@@ -73,7 +73,7 @@
 
           <label for="card-number"> CARD NUMBER</label> <br>
           <input type="text" name="cardNumber" id="card-number" placeholder=" e.g. 1234 5678 9123 0000 " maxlength="19"
-            minlength="19" autocomplete="off" pattern="[0-9.]+"> <br>
+            minlength="19" autocomplete="off"> <br>
           <div class="numberWarning hide ">Wrong format, numbers only</div>
 
           <table>
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Completed state start -->
-      <div class="hide final">
+      <div class=" final">
         <img src="images/icon-complete.svg" alt="Completed">
         <h1>THANK YOU!</h1>
         <h3> We've added your card details </h3>
