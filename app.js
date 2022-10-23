@@ -8,7 +8,6 @@ cardNumber.addEventListener('input', function () {
 });
 
 
-
 // change card name dynamically on CARD image
 let input_Name = document.querySelector('#name');
 let OnCard_name = document.querySelector('td.card-name>p');
